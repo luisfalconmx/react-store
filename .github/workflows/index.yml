@@ -1,0 +1,68 @@
+name: Actions
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, reopened, synchronize]
+  release:
+    types: [published]
+
+jobs:
+  maintenance:
+    name: Maintenance
+    uses: luisfalconmx/.github/.github/workflows/maintainer.yml@main
+    with:
+      image-name: luisfalconmx/test
+    secrets:
+      PERSONAL_ACCESS_TOKEN: ${{secrets.PERSONAL_ACCESS_TOKEN}}
+      DOCKERHUB_USERNAME: ${{secrets.DOCKERHUB_USERNAME}}
+      DOCKERHUB_PASSWORD: ${{secrets.DOCKERHUB_PASSWORD}}
+
+  analyze:
+    name: Analyze
+    uses: luisfalconmx/.github/.github/workflows/codeql.yml@main
+    with:
+      languages: javascript
+
+  build:
+    name: Build
+    needs: analyze
+    uses: luisfalconmx/.github/.github/workflows/builder.yml@main
+    with:
+      dockerfile: Dockerfile.dev
+      image-name: luisfalconmx/test
+
+  test:
+    name: Test
+    needs: build
+    uses: luisfalconmx/.github/.github/workflows/loader.yml@main
+    with:
+      name: Run Tests
+      image-name: luisfalconmx/test
+      command: yarn test
+
+  pre-release:
+    name: Pre Release
+    needs: test
+    if: github.event_name == 'push'
+    uses: luisfalconmx/.github/.github/workflows/releaser.yml@main
+    with:
+      pre-release: true
+    secrets:
+      PERSONAL_ACCESS_TOKEN: ${{secrets.PERSONAL_ACCESS_TOKEN}}
+
+  release:
+    name: Release
+    needs: pre-release
+    if: always() && github.event_name == 'release'
+    uses: luisfalconmx/.github/.github/workflows/releaser.yml@main
+    with:
+      image-name: luisfalconmx/test
+    secrets:
+      DOCKERHUB_USERNAME: ${{secrets.DOCKERHUB_USERNAME}}
+      DOCKERHUB_PASSWORD: ${{secrets.DOCKERHUB_PASSWORD}}
+      DOCKERHUB_TOKEN: ${{secrets.DOCKERHUB_TOKEN}}
+      GHCR_USERNAME: ${{secrets.GHCR_USERNAME}}
+      PERSONAL_ACCESS_TOKEN: ${{secrets.PERSONAL_ACCESS_TOKEN}}
