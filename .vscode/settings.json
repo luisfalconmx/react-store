@@ -2,5 +2,8 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "editor.tabSize": 2,
-  "eslint.alwaysShowStatus": true
+  "eslint.alwaysShowStatus": true,
+  "files.associations": {
+    "*.pcss": "scss"
+  }
 }
