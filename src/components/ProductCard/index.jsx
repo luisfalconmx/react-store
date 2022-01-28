@@ -12,8 +12,8 @@ const ProductCard = ({ id, product, price, stock }) => {
 
   return (
     <div className="ProductCard">
-      <h3>{product}</h3>
-      <p>Precio: ${price}</p>
+      <h2 className="ProductCard__Title">{product}</h2>
+      <p className="ProductCard__Price">Precio: ${price}</p>
       {stock && <p>Stock: {stock}</p>}
       <p>id: {id}</p>
       <button onClick={handleSubmit}>Add to cart</button>
@@ -22,7 +22,7 @@ const ProductCard = ({ id, product, price, stock }) => {
 }
 
 ProductCard.propTypes = {
-  id: propTypes.number.isRequired,
+  id: propTypes.string.isRequired,
   product: propTypes.string,
   price: propTypes.string,
   stock: propTypes.number

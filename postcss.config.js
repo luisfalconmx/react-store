@@ -1,7 +1,9 @@
 const postcssImport = require('postcss-import')
-const nesting = require('postcss-nesting')
+const postcssNested = require('postcss-nested')
+const postcssSimpleVars = require('postcss-simple-vars')
 const autoprefixer = require('autoprefixer')
 const cssnano = require('cssnano')
+const variablesFile = require('./src/styles/theme.js')
 
 module.exports = ({ env }) => {
   const config = {}
@@ -13,7 +15,10 @@ module.exports = ({ env }) => {
 
   config.plugins = [
     postcssImport(),
-    nesting(),
+    postcssNested(),
+    postcssSimpleVars({
+      variables: variablesFile
+    }),
     autoprefixer(),
     Production && cssnano(cssnanoOpts)
   ]
