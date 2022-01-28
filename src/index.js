@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import Router from './router'
 import '@styles/index.pcss'
 
-ReactDOM.render(<div>Hello World</div>, document.getElementById('app'))
+ReactDOM.render(<Router />, document.getElementById('app'))
