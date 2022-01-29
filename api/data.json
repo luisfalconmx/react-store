@@ -1,0 +1,100 @@
+{
+  "products": [
+    {
+      "id": "9481293",
+      "product": "Manzana Golden",
+      "price": "$10",
+      "stock": 4
+    },
+    {
+      "id": "7394057",
+      "product": "Bebida Energetica Energizer de 500ml",
+      "price": "$25",
+      "stock": 22
+    },
+    {
+      "id": "8394533",
+      "product": "Mantecada de Chocolate",
+      "price": "$4",
+      "stock": 6
+    },
+    {
+      "id": "8471002",
+      "product": "Cerveza de Lata",
+      "price": "$15",
+      "stock": 9
+    },
+    {
+      "id": "4769091",
+      "product": "Carne seca",
+      "price": "$22",
+      "stock": 0
+    },
+    {
+      "id": "0202380",
+      "product": "Jugo de Naranja",
+      "price": "$3",
+      "stock": 7
+    },
+    {
+      "id": "5661889",
+      "product": "Vino Tinto Reserva - Botella de 750ml",
+      "price": "$34",
+      "stock": 2
+    },
+    {
+      "id": "6399391",
+      "product": "Agua Mineral del Manantial",
+      "price": "$12",
+      "stock": 14
+    },
+    {
+      "id": "8969176",
+      "product": "Cacahuates Japoneses Kishi",
+      "price": "$5",
+      "stock": 19
+    },
+    {
+      "id": "3981759",
+      "product": "Cerveza Artesanal Heineken - Botella de 330ml",
+      "price": "$12",
+      "stock": 8
+    },
+    {
+      "id": "0269274",
+      "product": "Pan de Trigo Multigrano",
+      "price": "$28",
+      "stock": 0
+    },
+    {
+      "id": "5592447",
+      "product": "Atun de Aceite en Lata",
+      "price": "$17",
+      "stock": 3
+    },
+    {
+      "id": "3648397",
+      "product": "Pastel de 3 Leches - Esperanza",
+      "price": "$62",
+      "stock": 5
+    },
+    {
+      "id": "0064441",
+      "product": "Yogurt - Strawberry",
+      "price": "$5",
+      "stock": 32
+    },
+    {
+      "id": "1160514",
+      "product": "Pasta - Lasagna, Dry",
+      "price": "$28",
+      "stock": 0
+    },
+    {
+      "id": "2379235",
+      "product": "Sopa Maruchan de Camaron con Habanero",
+      "price": "$13",
+      "stock": 18
+    }
+  ]
+}
