@@ -38,6 +38,7 @@ module.exports = (env, argv) => {
     extensions: ['.js', '.jsx'],
     alias: {
       '@images': path.resolve(__dirname, 'src/assets/images/'),
+      '@videos': path.resolve(__dirname, 'src/assets/videos/'),
       '@icons': path.resolve(__dirname, 'src/assets/icons/'),
       '@components': path.resolve(__dirname, 'src/components/'),
       '@containers': path.resolve(__dirname, 'src/containers/'),
@@ -103,6 +104,13 @@ module.exports = (env, argv) => {
         type: 'asset/resource',
         generator: {
           filename: 'assets/images/[name].[contenthash].[ext]'
+        }
+      },
+      {
+        test: /\.(mp4)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/videos/[name].[contenthash].[ext]'
         }
       },
       {

@@ -1,9 +1,17 @@
 import React from 'react'
+import Hero from '@components/Hero'
+import HomeCover from '@images/inicio-video-cover.jpg'
+import HeroVideo from '@videos/inicio-video.mp4'
 
 const Home = () => {
   return (
     <>
-      <h1>Home</h1>
+      <Hero
+        title="Compra tus productos desde la comodidad de tu casa"
+        caption="Inicio"
+        image={HomeCover}
+        video={HeroVideo}
+      />
     </>
   )
 }
