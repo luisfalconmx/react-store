@@ -38,6 +38,7 @@ module.exports = (env, argv) => {
     extensions: ['.js', '.jsx'],
     alias: {
       '@images': path.resolve(__dirname, 'src/assets/images/'),
+      '@icons': path.resolve(__dirname, 'src/assets/icons/'),
       '@components': path.resolve(__dirname, 'src/components/'),
       '@containers': path.resolve(__dirname, 'src/containers/'),
       '@context': path.resolve(__dirname, 'src/context/'),
@@ -118,8 +119,8 @@ module.exports = (env, argv) => {
   config.plugins = [
     new HtmlWebpackPlugin({
       template: './public/index.html',
+      favicon: './public/favicon.ico',
       filename: 'index.html',
-      // favicon: './src/assets/icons/favicon.ico',
       inject: true
     }),
 
