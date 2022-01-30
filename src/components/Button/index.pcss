@@ -1,13 +1,12 @@
 .Button {
   padding: 13px 67px;
-  background-color: var(--color-primary);
-  color: white;
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 2.125rem;
   cursor: pointer;
+  border-width: 1px;
+  border-style: solid;
   border-radius: 6px;
-  border: 0;
   transition: all ease 0.3s;
 
   &:hover {
@@ -16,5 +15,48 @@
 
   &:active {
     transform: scale(0.95);
+  }
+
+  &--Primary {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+
+  &--Success {
+    background-color: var(--color-success);
+    border-color: var(--color-success);
+    color: var(--color-success);
+  }
+
+  &--Error {
+    background-color: var(--color-error);
+    border-color: var(--color-error);
+    color: var(--color-error);
+  }
+
+  &--Warning {
+    background-color: var(--color-warning);
+    border-color: var(--color-warning);
+    color: var(--color-warning);
+  }
+
+  &--Disabled {
+    background-color: var(--color-disabled);
+    border-color: var(--color-disabled);
+    color: var(--color-disabled);
+    cursor: initial;
+
+    &:hover {
+      transform: none;
+    }
+  }
+
+  &--Outline {
+    background-color: transparent;
+  }
+
+  &--Normal {
+    color: var(--color-white);
   }
 }

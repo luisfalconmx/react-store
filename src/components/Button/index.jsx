@@ -1,13 +1,31 @@
 import React from 'react'
 import propTypes from 'prop-types'
+import classNames from 'classnames'
 import './index.pcss'
 
-const Button = ({ text = 'Button text' }) => {
-  return <button className="Button">{text}</button>
+const Button = ({ children, className, type = 'primary', outline = false }) => {
+  const ButtonClasses = classNames('Button', className, {
+    'Button--Primary': type === 'primary',
+    'Button--Success': type === 'success',
+    'Button--Error': type === 'error',
+    'Button--Warning': type === 'warning',
+    'Button--Disabled': type === 'disabled',
+    'Button--Outline': outline,
+    'Button--Normal': !outline
+  })
+
+  return (
+    <button className={ButtonClasses} disabled={type === 'disabled'}>
+      {children}
+    </button>
+  )
 }
 
 Button.propTypes = {
-  text: propTypes.string
+  children: propTypes.node.isRequired,
+  className: propTypes.string,
+  type: propTypes.oneOf(['primary', 'success', 'error', 'warning', 'disabled']),
+  outline: propTypes.bool
 }
 
 export default Button

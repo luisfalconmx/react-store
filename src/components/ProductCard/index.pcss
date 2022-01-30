@@ -1,13 +1,79 @@
 .ProductCard {
-  max-width: 420px;
-  padding: 10px 40px;
-  margin: 10px;
+  padding: 34px 26px;
+  background-color: var(--color-white);
   border-radius: 6px;
-  box-shadow: 0 0 26px rgb(0 0 0 / 16%);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--color-night);
+  }
+
+  &--Disabled {
+    color: var(--color-disabled);
+  }
+
+  &__ID {
+    display: block;
+    text-align: right;
+    font-size: 0.75rem;
+    font-weight: 300;
+    line-height: 0.908rem;
+    margin: 0 0 12px;
+  }
 
   &__Title {
-    font-size: 24px;
-    font-weight: lighter;
-    margin-bottom: 10px;
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 2.421rem;
+    margin: 0 0 6px;
+  }
+
+  &__Price {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.816rem;
+    margin: 0 0 12px;
+  }
+
+  &__Label {
+    display: flex;
+    align-items: center;
+    margin: 0 0 16px;
+
+    &--Success {
+      color: var(--color-success);
+    }
+
+    &--Error {
+      color: var(--color-error);
+    }
+  }
+
+  &__Icon {
+    margin-right: 10px;
+  }
+
+  &__LabelText {
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.361rem;
+  }
+
+  &__Description {
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 2rem;
+    margin: 0 0 32px;
+  }
+
+  &__Actions {
+    margin-top: auto;
+  }
+
+  &__Button {
+    width: 100%;
   }
 }

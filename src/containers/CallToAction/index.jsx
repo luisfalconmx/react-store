@@ -12,7 +12,7 @@ const CallToAction = () => {
         exactamente lo que necesitas
       </p>
       <Link to="/productos">
-        <Button className="CallToActionButton" text="Ver productos" />
+        <Button className="CallToAction__Button">Ver productos</Button>
       </Link>
     </section>
   )
