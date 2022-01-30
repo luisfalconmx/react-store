@@ -1,0 +1,47 @@
+.Toolbar {
+  width: 100%;
+  max-width: 1024px;
+  padding: 40px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--shadow);
+  background-color: var(--color-white);
+  border-radius: 6px;
+  margin: -60px auto 30px;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--color-night);
+  }
+
+  &__Counter {
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 2.42rem;
+  }
+
+  &__Icon {
+    color: var(--color-error);
+    cursor: pointer;
+    transition: all ease 0.3s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    &:active {
+      transform: scale(0.8);
+    }
+
+    &--Disabled {
+      color: var(--color-disabled);
+      cursor: initial;
+      transform: none;
+
+      &:hover,
+      &:active {
+        transform: none;
+      }
+    }
+  }
+}

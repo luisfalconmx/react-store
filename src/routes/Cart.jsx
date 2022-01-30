@@ -1,23 +1,24 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
+import Hero from '@components/Hero'
+import Toolbar from '@components/Toolbar'
 import AppContext from '@context/AppContext'
+import CartCover from '@images/carrito-cover.jpg'
+import CartCoverWebp from '@images/carrito-cover.jpg?as=webp'
 
 const Cart = () => {
   const { cart } = useContext(AppContext)
-  console.log('cart', cart)
+  const [localState] = useState(cart.length)
 
   return (
-    <div>
-      <h1>Cart</h1>
-      <p>this is a cart</p>
-      {cart.map((item) => (
-        <div key={item.id}>
-          <h2>{item.product}</h2>
-          <span>{item.id}</span>
-          <p>{item.quantity}</p>
-          <b>{item.price}</b>
-        </div>
-      ))}
-    </div>
+    <>
+      <Hero
+        title="Agrega productos a tu carrito y completa tu orden"
+        caption="Carrito de Compras"
+        image={CartCover}
+        imageWebp={CartCoverWebp}
+      />
+      <Toolbar count={localState} />
+    </>
   )
 }
 
