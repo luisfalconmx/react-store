@@ -1187,6 +1187,18 @@
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.14.0.tgz#9fb3a3cf3132328151f353de4632e01e52102bea"
   integrity sha512-9NET910DNaIPngYnLLPeg+Ogzqsi9uM4mSboU5y6p8S5DzMTVEsJZrawi+BoDNUVBa2DhJqQYUFvMDfgU062LQ==
 
+"@splidejs/react-splide@^0.6.20":
+  version "0.6.20"
+  resolved "https://registry.yarnpkg.com/@splidejs/react-splide/-/react-splide-0.6.20.tgz#8056b3fd91aba9ef2ff06d21ccdfb84bae54f876"
+  integrity sha512-Bp1cLIieCiQQrUaszlOTmYAcjPJEvH4Qvd4agVlVW8o7QMtSQ0477JbuQqNmYsz9FFDcD/kFiF2fWjIjbAegTA==
+  dependencies:
+    "@splidejs/splide" "^3.6.12"
+
+"@splidejs/splide@^3.6.12":
+  version "3.6.12"
+  resolved "https://registry.yarnpkg.com/@splidejs/splide/-/splide-3.6.12.tgz#9b6bede5c99140fd06754990c91e474374566c30"
+  integrity sha512-ggOUAuSxjWuxxL0IQEZcux26KByfKWfYM2HYmvDBdxkXc5evVW+xuECO+3iuciyrJpgcbYTr4hn0cHfbNlYIeA==
+
 "@squoosh/lib@^0.4.0":
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/@squoosh/lib/-/lib-0.4.0.tgz#31d18cb082c69e404589e2e281414d10f91e1668"

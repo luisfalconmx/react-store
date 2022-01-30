@@ -88,6 +88,7 @@
     "webpackbar": "^5.0.2"
   },
   "dependencies": {
+    "@splidejs/react-splide": "^0.6.20",
     "axios": "^0.25.0",
     "classnames": "^2.3.1",
     "prop-types": "^15.8.1",
