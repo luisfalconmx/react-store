@@ -1,0 +1,45 @@
+.RelatedInfo {
+  max-width: 1220px;
+  margin: 0 auto 120px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  &__Image img {
+    width: 100%;
+    max-width: 480px;
+    object-fit: cover;
+  }
+
+  &__Content {
+    margin: auto 0;
+  }
+
+  &__Title {
+    font-size: 2.875rem;
+    line-height: 4rem;
+    margin: 0 0 80px;
+  }
+
+  &__Track {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+  }
+
+  &__Card {
+    max-width: 264px;
+  }
+
+  &__CardTitle {
+    font-size: 1.25rem;
+    line-height: 2.125rem;
+    margin: 0 0 24px;
+    font-weight: 700;
+  }
+
+  &__CardDescription {
+    font-size: 1.125rem;
+    line-height: 2rem;
+    font-weight: 400;
+  }
+}

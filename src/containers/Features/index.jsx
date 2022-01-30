@@ -1,8 +1,8 @@
 import React from 'react'
 import { CheckCircle } from 'react-feather'
 import Image from '@components/Image'
-import FeaturedImage from '@images/pexels-ivan-samkov-4458553.jpg'
-import FeaturedImageWebp from '@images/pexels-ivan-samkov-4458553.jpg?as=webp'
+import FeaturedImage from '@images/pexels-ivan-samkov.jpg'
+import FeaturedImageWebp from '@images/pexels-ivan-samkov.jpg?as=webp'
 import './index.pcss'
 
 const Features = () => {
@@ -33,7 +33,7 @@ const Features = () => {
         className="Features__Image"
         src={FeaturedImage}
         srcSet={FeaturedImageWebp}
-        alt="Pide todo desde tu celular o laptop"
+        alt="Photo by Ivan Samkov from Pexels"
       />
     </section>
   )
