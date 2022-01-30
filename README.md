@@ -4,7 +4,7 @@
 </h1>
 
 <h3 align="center">
-  Single Page Application with React, PostCSS, Webpack and Docker.
+  Single Page Application with React, React Router, PostCSS, Webpack, Docker and Docker Compose.
 </h3>
 
 <br />
