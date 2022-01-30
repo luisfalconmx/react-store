@@ -1,7 +1,7 @@
 import React from 'react'
 import propTypes from 'prop-types'
-import Navbar from '@containers/Navbar'
-import Footer from '@containers/Footer'
+import Navbar from '@components/Navbar'
+import Footer from '@components/Footer'
 import './index.pcss'
 
 const Layout = ({ children }) => (

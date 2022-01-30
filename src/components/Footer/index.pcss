@@ -1,0 +1,74 @@
+.Footer {
+  margin-top: auto;
+  padding: 50px 150px 54px;
+  background-color: var(--color-light);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 10px;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--color-black);
+  }
+
+  &__Identity {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--color-black);
+  }
+
+  &__Logo {
+    margin-right: 22px;
+  }
+
+  &__Title {
+    font-size: 1.375rem;
+    line-height: 1.664rem;
+    font-weight: 600;
+
+    @media (prefers-color-scheme: dark) {
+      color: var(--color-white);
+    }
+  }
+
+  &__Description {
+    font-size: 1.125rem;
+    line-height: 2rem;
+    font-weight: 400;
+    margin-top: 10px;
+    text-align: right;
+
+    @media (prefers-color-scheme: dark) {
+      color: var(--color-white);
+    }
+  }
+
+  &__Leyend {
+    font-size: 0.875;
+    line-height: 1.125rem;
+    font-weight: 400;
+
+    @media (prefers-color-scheme: dark) {
+      color: var(--color-white);
+    }
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  &__Social {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__SocialIcon {
+    margin-left: 15px;
+
+    @media (prefers-color-scheme: dark) {
+      color: var(--color-white);
+    }
+  }
+}
