@@ -9,6 +9,7 @@ const Home = () => {
       <Hero
         title="Compra tus productos desde la comodidad de tu casa"
         caption="Inicio"
+        buttonText="Ver Productos"
         image={HomeCover}
         video={HeroVideo}
       />

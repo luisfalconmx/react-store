@@ -5,7 +5,7 @@ import Image from '@components/Image'
 import Button from '@components/Button'
 import './index.pcss'
 
-const Hero = ({ title, caption, image, imageWebp, video }) => {
+const Hero = ({ title, caption, buttonText, image, imageWebp, video }) => {
   return (
     <div className="Hero">
       {video ? (
@@ -25,9 +25,11 @@ const Hero = ({ title, caption, image, imageWebp, video }) => {
       <div className="Hero__Content">
         <small className="Hero__Caption">{caption}</small>
         <h1 className="Hero__Title">{title}</h1>
-        <Link to="/productos">
-          <Button text="Ver productos" />
-        </Link>
+        {buttonText && (
+          <Link to="/productos">
+            <Button text={buttonText} />
+          </Link>
+        )}
       </div>
     </div>
   )
@@ -36,6 +38,7 @@ const Hero = ({ title, caption, image, imageWebp, video }) => {
 Hero.propTypes = {
   title: propTypes.string.isRequired,
   caption: propTypes.string.isRequired,
+  buttonText: propTypes.string,
   image: propTypes.string,
   imageWebp: propTypes.string,
   video: propTypes.string
