@@ -1,0 +1,47 @@
+.Counter {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  justify-items: center;
+  align-items: center;
+  border: 2px solid var(--color-primary);
+  min-height: 60px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+
+  &--Disabled {
+    color: var(--color-disabled);
+    border-color: var(--color-disabled);
+  }
+
+  &__Button {
+    width: 60px;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &__Icon {
+    color: var(--color-black);
+    transition: all ease 0.2s;
+
+    @media (prefers-color-scheme: dark) {
+      color: var(--color-white);
+    }
+  }
+
+  &__Button:active &__Icon {
+    transform: scale(1.6);
+  }
+
+  &__Button:disabled &__Icon {
+    transform: none;
+    color: var(--color-disabled);
+  }
+
+  &__Text {
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 2rem;
+  }
+}

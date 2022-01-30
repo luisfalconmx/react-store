@@ -1,9 +1,10 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import propTypes from 'prop-types'
 import classNames from 'classnames'
-import AppContext from '@context/AppContext'
 import { CheckCircle, AlertCircle } from 'react-feather'
 import Button from '@components/Button'
+import Counter from '@components/Counter'
+import AppContext from '@context/AppContext'
 import './index.pcss'
 
 const ProductCard = ({
@@ -13,14 +14,28 @@ const ProductCard = ({
   stock,
   description = 'La descripción del producto aún no está disponible en nuestra API o la información del producto se está actualizando.'
 }) => {
+  const [quantity, setQuantity] = useState(1)
   const { addToCart } = useContext(AppContext)
+
+  const incrementQuantity = () => {
+    if (quantity < stock) {
+      setQuantity(quantity + 1)
+    }
+  }
+
+  const decrementQuantity = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1)
+    }
+  }
+
+  const handleSubmit = () => {
+    addToCart({ id, product, price, stock, quantity })
+  }
+
   const ProductCardClasses = classNames('ProductCard', {
     'ProductCard--Disabled': stock <= 0
   })
-
-  const handleSubmit = () => {
-    addToCart({ id, product, price, stock })
-  }
 
   return (
     <div className={ProductCardClasses}>
@@ -42,6 +57,13 @@ const ProductCard = ({
       )}
       <p className="ProductCard__Description">{description}</p>
       <div className="ProductCard__Actions">
+        <Counter
+          count={quantity}
+          max={stock}
+          decrement={decrementQuantity}
+          increment={incrementQuantity}
+          disabled={stock <= 0}
+        />
         <Button
           className="ProductCard__Button"
           onClick={handleSubmit}
