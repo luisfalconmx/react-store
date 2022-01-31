@@ -1,19 +1,35 @@
 .Benefits {
   max-width: 1041px;
   margin: 120px auto;
+  padding: 0 30px;
+
+  @media (min-width: 992px) {
+    padding: initial;
+  }
 
   &__Title {
-    font-size: 2.875rem;
-    line-height: 4rem;
+    font-size: 2.25rem;
     font-weight: 900;
     text-align: center;
-    margin: 0 0 100px;
+    margin: 0 0 60px;
+
+    @media (min-width: 768px) {
+      font-size: 2.875rem;
+      line-height: 4rem;
+      text-align: center;
+      margin: 0 0 100px;
+    }
   }
 
   &__Track {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 20px;
+    grid-template-columns: 1fr;
+    row-gap: 60px;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 20px;
+    }
   }
 
   &__Card {
