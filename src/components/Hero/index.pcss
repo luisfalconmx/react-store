@@ -1,11 +1,21 @@
 .Hero {
   width: 100%;
-  height: 600px;
+  height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0 10px;
+
+  @media (min-width: 576px) {
+    padding: 0 20px;
+  }
+
+  @media (min-width: 768px) {
+    height: 600px;
+    padding: initial;
+  }
 
   &__Video {
     position: absolute;
@@ -48,6 +58,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: auto;
+    margin-bottom: 8vh;
+
+    @media (min-width: 768px) {
+      margin-top: initial;
+      margin-bottom: initial;
+    }
   }
 
   &__Caption {
@@ -59,12 +76,17 @@
   }
 
   &__Title {
-    font-size: 2.875rem;
-    line-height: 4rem;
+    font-size: 2.6rem;
     color: var(--color-white);
     max-width: 750px;
     text-align: center;
     font-weight: 900;
     margin: 0 0 32px;
+
+    @media (min-width: 768px) {
+      font-size: 2.875rem;
+      line-height: 4rem;
+      text-align: center;
+    }
   }
 }
