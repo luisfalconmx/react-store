@@ -59,9 +59,14 @@ const Cart = () => {
 
       <div className="Cart__Track">
         <Link to="/productos">
-          <Button outline>Ver más productos</Button>
+          <Button className="Cart__Button" outline>
+            Ver más productos
+          </Button>
         </Link>
-        <Button type={cart.length <= 0 ? 'disabled' : 'primary'}>
+        <Button
+          className="Cart__Button"
+          type={cart.length <= 0 ? 'disabled' : 'primary'}
+        >
           Completar orden
         </Button>
       </div>
