@@ -1,0 +1,70 @@
+{
+  "products": [
+    {
+      "id": "3237943371",
+      "product": "Cheese - Mozzarella",
+      "stock": 3,
+      "price": "$0.48"
+    },
+    {
+      "id": "4433248835",
+      "product": "Salt And Pepper Mix - Black",
+      "stock": 2,
+      "price": "$7.69"
+    },
+    {
+      "id": "4970695261",
+      "product": "Yoplait - Strawbrasp Peac",
+      "stock": 6,
+      "price": "$7.72"
+    },
+    {
+      "id": "3287570838",
+      "product": "Bread - Rolls, Rye",
+      "stock": 0,
+      "price": "$8.62"
+    },
+    {
+      "id": "6575422799",
+      "product": "Chilli Paste, Ginger Garlic",
+      "stock": 7,
+      "price": "$0.54"
+    },
+    {
+      "id": "6112343037",
+      "product": "Chocolate - Pistoles, White",
+      "stock": 1,
+      "price": "$8.91"
+    },
+    {
+      "id": "3341198989",
+      "product": "Coffee Caramel Biscotti",
+      "stock": 8,
+      "price": "$4.61"
+    },
+    {
+      "id": "1267843438",
+      "product": "Ecolab - Hand Soap Form Antibac",
+      "stock": 1,
+      "price": "$7.57"
+    },
+    {
+      "id": "8892706799",
+      "product": "Beer - Rickards Red",
+      "stock": 2,
+      "price": "$8.84"
+    },
+    {
+      "id": "8486840929",
+      "product": "Bread - Raisin Walnut Pull",
+      "stock": 1,
+      "price": "$8.39"
+    },
+    {
+      "id": "4156135438",
+      "product": "Meldea Green Tea Liquor",
+      "stock": 4,
+      "price": "$4.75"
+    }
+  ]
+}

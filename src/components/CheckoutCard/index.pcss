@@ -1,0 +1,66 @@
+.CheckoutCard {
+  max-width: 1024px;
+  margin: 0 auto 30px;
+  background-color: var(--color-white);
+  padding: 30px;
+  box-shadow: var(--shadow);
+  border-radius: 6px;
+  display: grid;
+  grid-template-columns: 1fr 30%;
+  grid-template-areas: 'title icon' 'id icon' 'description icon' 'track price';
+
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--color-night);
+  }
+
+  &__Title {
+    grid-area: title;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 38.73px;
+    margin: 0 0 8px;
+  }
+
+  &__Icon {
+    grid-area: icon;
+    color: var(--color-error);
+    margin-left: auto;
+    cursor: pointer;
+  }
+
+  &__ID {
+    display: block;
+    grid-area: id;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 14.52px;
+    margin: 0 0 12px;
+  }
+
+  &__Description {
+    grid-area: description;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 32px;
+    margin: 0 0 50px;
+  }
+
+  &__Price {
+    grid-area: price;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 38.73px;
+    margin: auto 0 0 auto;
+  }
+
+  &__Track {
+    grid-area: track;
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+
+  &__Button {
+    margin-left: 12px;
+  }
+}

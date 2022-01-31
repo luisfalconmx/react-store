@@ -10,7 +10,7 @@
     "analyze": "webpack --mode development --env analyze",
     "prepare": "husky install",
     "pre-commit": "lint-staged",
-    "api": "json-server --watch api/data.json --port 4000"
+    "api": "json-server --watch api/response.json --port 4000"
   },
   "lint-staged": {
     "*.{js,jsx}": "eslint --cache --fix",
