@@ -1,13 +1,20 @@
 .Footer {
   margin-top: auto;
-  padding: 50px 150px 54px;
+  padding: 50px 40px;
   background-color: var(--color-light);
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
+  justify-items: center;
   gap: 40px 10px;
 
   @media (prefers-color-scheme: dark) {
     background-color: var(--color-night);
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 50px 150px 54px;
+    justify-items: initial;
   }
 
   &__Identity {
@@ -15,10 +22,23 @@
     display: flex;
     align-items: center;
     text-decoration: none;
+    flex-direction: column;
+    justify-items: center;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-items: initial;
+    }
   }
 
   &__Logo {
-    margin-right: 22px;
+    margin-right: 0;
+    margin-bottom: 12px;
+
+    @media (min-width: 768px) {
+      margin-right: 22px;
+      margin-bottom: initial;
+    }
   }
 
   &__Title {
@@ -32,7 +52,11 @@
     line-height: 2rem;
     font-weight: 400;
     margin-top: 10px;
-    text-align: right;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      text-align: right;
+    }
   }
 
   &__Leyend {
