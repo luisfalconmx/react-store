@@ -35,12 +35,7 @@ const Team = () => {
   const SliderOptions = {
     type: 'loop',
     autoWidth: true,
-    focus: 'center',
-    breackpoints: {
-      768: {
-        autoWidth: false
-      }
-    }
+    focus: 'center'
   }
 
   return (

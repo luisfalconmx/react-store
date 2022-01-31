@@ -24,8 +24,8 @@ const Navbar = () => {
       route: '/carrito-de-compras'
     },
     {
-      text: 'Contacto',
-      route: '/not-found'
+      text: 'Repositorio',
+      url: 'https://github.com/luisfalconmx/spa-store'
     }
   ]
 
@@ -60,11 +60,22 @@ const Navbar = () => {
           onClick={toggleMenu}
         />
         <ul className="Navbar__List">
-          {Links.map(({ text, route }) => (
+          {Links.map(({ text, route, url }) => (
             <li className="Navbar__Item" key={text}>
-              <Link className="Navbar__Link" onClick={toggleMenu} to={route}>
-                {text}
-              </Link>
+              {url ? (
+                <a
+                  className="Navbar__Link"
+                  href={url}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {text}
+                </a>
+              ) : (
+                <Link className="Navbar__Link" onClick={toggleMenu} to={route}>
+                  {text}
+                </Link>
+              )}
             </li>
           ))}
         </ul>
