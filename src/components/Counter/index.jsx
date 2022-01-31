@@ -35,8 +35,8 @@ const Counter = ({ count, max, decrement, increment, disabled = false }) => {
 }
 
 Counter.propTypes = {
-  count: propTypes.number.isRequired,
-  max: propTypes.number.isRequired,
+  count: propTypes.number,
+  max: propTypes.number,
   decrement: propTypes.func.isRequired,
   increment: propTypes.func.isRequired,
   disabled: propTypes.bool

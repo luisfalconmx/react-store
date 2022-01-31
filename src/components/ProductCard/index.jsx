@@ -80,7 +80,7 @@ const ProductCard = ({
 }
 
 ProductCard.propTypes = {
-  id: propTypes.string.isRequired,
+  id: propTypes.string,
   product: propTypes.string,
   price: propTypes.string,
   stock: propTypes.number,
