@@ -1,23 +1,33 @@
 .Toolbar {
-  width: 100%;
+  width: calc(100% - 30px);
   max-width: 1024px;
-  padding: 40px 60px;
+  padding: 30px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: var(--shadow);
   background-color: var(--color-white);
   border-radius: 6px;
-  margin: -60px auto 30px;
+  margin: 20px 15px 30px;
 
   @media (prefers-color-scheme: dark) {
     background-color: var(--color-night);
   }
 
+  @media (min-width: 768px) {
+    width: 100%;
+    padding: 40px 60px;
+    margin: -60px auto 30px;
+  }
+
   &__Counter {
     font-weight: 300;
-    font-size: 2rem;
-    line-height: 2.42rem;
+    font-size: 1.5rem;
+
+    @media (min-width: 768px) {
+      font-size: 2rem;
+      line-height: 2.42rem;
+    }
   }
 
   &__Icon {
