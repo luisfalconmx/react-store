@@ -42,7 +42,7 @@ const ProductCard = ({
 
   return (
     <div className={ProductCardClasses}>
-      <span className="ProductCard__ID">{`#${id}`}</span>
+      <span className="ProductCard__ID">{id ? `#${id}` : ''}</span>
       <h2 className="ProductCard__Title">{product}</h2>
       <strong className="ProductCard__Price">{price}</strong>
       {stock > 0 ? (
@@ -65,12 +65,12 @@ const ProductCard = ({
           max={stock}
           decrement={decrementQuantity}
           increment={incrementQuantity}
-          disabled={stock <= 0}
+          disabled={stock <= 0 || stock === undefined}
         />
         <Button
           className="ProductCard__Button"
           onClick={handleSubmit}
-          type={stock <= 0 ? 'disabled' : 'primary'}
+          type={stock <= 0 || stock === undefined ? 'disabled' : 'primary'}
         >
           Agregar al carrito
         </Button>

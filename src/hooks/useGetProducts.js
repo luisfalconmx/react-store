@@ -4,10 +4,11 @@ import axios from 'axios'
 const useGetProducts = () => {
   const [products, setProducts] = useState([])
 
-  console.log('products', products)
+  // const API = 'https://my.api.mockaroo.com/products'
+  // const API_KEY = '253a0410'
 
-  const API = 'https://my.api.mockaroo.com/products'
-  const API_KEY = '253a0410'
+  const API = 'http://localhost:4000/products'
+  const API_KEY = '58239'
 
   useEffect(async () => {
     const axiosOptions = {
