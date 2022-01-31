@@ -1,0 +1,1 @@
+{"version":3,"file":"378.7d7b1d8852548a451537.js","mappings":"4JAQA,UANiB,IACf,gCACE","sources":["webpack://@luisfalconmx/spa-store/./src/routes/NotFound.jsx"],"sourcesContent":["import React from 'react'\n\nconst NotFound = () => (\n  <>\n    <h1>404</h1>\n  </>\n)\n\nexport default NotFound\n"],"names":[],"sourceRoot":""}

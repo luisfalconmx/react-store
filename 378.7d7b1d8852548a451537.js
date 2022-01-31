@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunk_luisfalconmx_spa_store=self.webpackChunk_luisfalconmx_spa_store||[]).push([[378],{2378:function(e,l,a){a.r(l);var n=a(7294);l.default=()=>n.createElement(n.Fragment,null,n.createElement("h1",null,"404"))}}]);
+//# sourceMappingURL=378.7d7b1d8852548a451537.js.map
