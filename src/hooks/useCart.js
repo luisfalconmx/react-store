@@ -7,21 +7,29 @@ const useCart = () => {
     const productExists = cart.find((item) => item.id === product.id)
 
     if (productExists) {
-      setCart(
-        cart.map((item) => {
-          if (item.id === product.id) {
-            item.quantity = item.quantity + product.quantity
+      const newData = cart.map((item) => {
+        if (item.id === product.id) {
+          const totalQuantity = item.quantity + product.quantity
+
+          if (totalQuantity >= product.stock) {
+            item.quantity = product.stock
+            return item
           }
 
+          item.quantity = totalQuantity
           return item
-        })
-      )
+        }
+
+        return item
+      })
+
+      setCart(newData)
     } else {
       setCart([...cart, product])
     }
   }
 
-  const updateCart = (id, product) => {
+  const updateCart = (product) => {
     setCart(cart.map((item) => (item.id === product.id ? product : item)))
   }
 

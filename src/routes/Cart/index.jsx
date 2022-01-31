@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Hero from '@components/Hero'
 import Toolbar from '@components/Toolbar'
@@ -12,8 +12,22 @@ import './index.pcss'
 
 const Cart = () => {
   const { cart } = useContext(AppContext)
+  const [total, setTotal] = useState(0)
 
-  useEffect(() => {}, [cart])
+  useEffect(() => {
+    const reducer = (previous, current) => {
+      return previous + current
+    }
+
+    const prices = cart.map((item) => {
+      const cleanPrice = item.price.replace('$', '')
+      const price = parseFloat(cleanPrice).toFixed(2) * item.quantity
+      return price
+    })
+
+    const totalPrice = prices.reduce(reducer, 0)
+    setTotal(totalPrice)
+  }, [cart])
 
   return (
     <>
@@ -44,6 +58,7 @@ const Cart = () => {
           Completar orden
         </Button>
       </div>
+      tu carrito: {total}
     </>
   )
 }

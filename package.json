@@ -40,6 +40,17 @@
     "url": "https://github.com/luisfalconmx/spa-store/issues"
   },
   "homepage": "https://github.com/luisfalconmx/spa-store#readme",
+  "dependencies": {
+    "@splidejs/react-splide": "^0.6.20",
+    "axios": "^0.25.0",
+    "classnames": "^2.3.1",
+    "prop-types": "^15.8.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-feather": "^2.0.9",
+    "react-router-dom": "^6.2.1",
+    "react-svg": "^14.1.9"
+  },
   "devDependencies": {
     "@babel/core": "^7.16.12",
     "@babel/plugin-transform-runtime": "^7.16.10",
@@ -86,16 +97,5 @@
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.7.3",
     "webpackbar": "^5.0.2"
-  },
-  "dependencies": {
-    "@splidejs/react-splide": "^0.6.20",
-    "axios": "^0.25.0",
-    "classnames": "^2.3.1",
-    "prop-types": "^15.8.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-feather": "^2.0.9",
-    "react-router-dom": "^6.2.1",
-    "react-svg": "^14.1.9"
   }
 }

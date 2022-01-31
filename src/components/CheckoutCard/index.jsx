@@ -30,7 +30,7 @@ const CheckoutCard = ({ product, count, max }) => {
 
   const handleUpdate = () => {
     product.quantity = quantity
-    updateCart(product.id, product)
+    updateCart(product)
   }
 
   const handleDelete = () => {
@@ -41,7 +41,7 @@ const CheckoutCard = ({ product, count, max }) => {
     <div className="CheckoutCard">
       <Trash size={24} className="CheckoutCard__Icon" onClick={handleDelete} />
       <h2 className="CheckoutCard__Title">{product.product}</h2>
-      <span className="CheckoutCard__ID">{product.id}</span>
+      <span className="CheckoutCard__ID">{`#${product.id}`}</span>
       <strong className="CheckoutCard__Price">${totalPrice()}</strong>
       <p className="CheckoutCard__Description">
         La descripción del producto aún no está disponible en nuestra API o la

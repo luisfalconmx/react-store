@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import propTypes from 'prop-types'
 import classNames from 'classnames'
 import { CheckCircle, AlertCircle } from 'react-feather'
@@ -16,6 +17,7 @@ const ProductCard = ({
 }) => {
   const [quantity, setQuantity] = useState(1)
   const { addToCart } = useContext(AppContext)
+  const navigate = useNavigate()
 
   const incrementQuantity = () => {
     if (quantity < stock) {
@@ -29,8 +31,9 @@ const ProductCard = ({
     }
   }
 
-  const handleSubmit = () => {
-    addToCart({ id, product, price, stock, quantity })
+  const handleSubmit = async () => {
+    await addToCart({ id, product, price, stock, quantity })
+    navigate('/carrito-de-compras')
   }
 
   const ProductCardClasses = classNames('ProductCard', {
