@@ -26,7 +26,7 @@ const Cart = () => {
     })
 
     const totalPrice = prices.reduce(reducer, 0)
-    setTotal(totalPrice)
+    setTotal(parseFloat(totalPrice).toFixed(2))
   }, [cart])
 
   return (
@@ -50,6 +50,13 @@ const Cart = () => {
           increment={() => product.quantity + 1}
         />
       ))}
+
+      {cart.length > 0 && (
+        <div className="Cart__Total">
+          Total: <b className="Cart__TotalNumber">${total}</b>
+        </div>
+      )}
+
       <div className="Cart__Track">
         <Link to="/productos">
           <Button outline>Ver más productos</Button>
@@ -58,7 +65,6 @@ const Cart = () => {
           Completar orden
         </Button>
       </div>
-      tu carrito: {total}
     </>
   )
 }

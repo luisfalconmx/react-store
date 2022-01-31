@@ -1,7 +1,13 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const useCart = () => {
-  const [cart, setCart] = useState([])
+  const localData = localStorage.getItem('spa-store')
+  const initialState = JSON.parse(localData)
+  const [cart, setCart] = useState(initialState || [])
+
+  useEffect(() => {
+    localStorage.setItem('spa-store', JSON.stringify(cart))
+  }, [cart])
 
   const addToCart = (product) => {
     const productExists = cart.find((item) => item.id === product.id)
