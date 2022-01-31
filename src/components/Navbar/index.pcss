@@ -1,7 +1,7 @@
 .Navbar {
   width: 100%;
   min-height: 100px;
-  padding: 0 48px;
+  padding: 0 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -9,6 +9,10 @@
   top: 0;
   left: 0;
   z-index: 100;
+
+  @media (min-width: 992px) {
+    padding: 0 48px;
+  }
 
   &__Identity {
     display: flex;
@@ -28,26 +32,99 @@
     line-height: 26.63px;
   }
 
+  &__Button {
+    cursor: pointer;
+
+    &--Menu {
+      color: var(--color-white);
+      margin-left: auto;
+    }
+
+    &--X {
+      color: var(--color-black);
+      display: block;
+      margin-left: auto;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      color: var(--color-white);
+    }
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
   &__Nav {
     margin-left: auto;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100vw;
+    background-color: var(--color-white);
+    transition: all ease 0.3s;
+    padding: 34px 24px;
+
+    &--Active {
+      left: 0;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--color-night);
+    }
+
+    @media (min-width: 768px) {
+      width: initial;
+      height: initial;
+      position: initial;
+      top: initial;
+      left: initial;
+      background-color: initial;
+      transition: all ease 0.4s;
+      padding: initial;
+    }
   }
 
   &__List {
     display: flex;
     align-items: center;
     list-style: none;
+    flex-direction: column;
+    justify-content: center;
+    height: 90%;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: initial;
+      height: initial;
+    }
   }
 
   &__Item {
     margin-right: 32px;
+    margin-bottom: 40px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 0;
+    }
   }
 
   &__Link {
     text-decoration: none;
-    color: var(--color-white);
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 1.5rem;
     line-height: 24px;
     cursor: pointer;
+    color: var(--color-black);
+
+    @media (prefers-color-scheme: dark) {
+      color: var(--color-white);
+    }
+
+    @media (min-width: 768px) {
+      font-size: 1rem;
+      color: var(--color-white);
+    }
   }
 }

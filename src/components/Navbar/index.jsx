@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import classNames from 'classnames'
+import { Menu, X } from 'react-feather'
 import Image from '@components/Image'
 import Logo from '@images/luisfalconmx-logo.png'
 import LogoWebp from '@images/luisfalconmx-logo.png?as=webp'
 import './index.pcss'
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false)
+
   const Links = [
     {
       text: 'Inicio',
@@ -25,6 +29,14 @@ const Navbar = () => {
     }
   ]
 
+  const toggleMenu = () => {
+    setIsOpen(!isOpen)
+  }
+
+  const navbarNav = classNames('Navbar__Nav', {
+    'Navbar__Nav--Active': isOpen
+  })
+
   return (
     <header className="Navbar">
       <Link to="/" className="Navbar__Identity">
@@ -36,11 +48,21 @@ const Navbar = () => {
         />
         <span className="Navbar__Title">SPA Store</span>
       </Link>
-      <nav className="Navbar__Nav">
+      <Menu
+        className="Navbar__Button Navbar__Button--Menu"
+        size={32}
+        onClick={toggleMenu}
+      />
+      <nav className={navbarNav}>
+        <X
+          className="Navbar__Button Navbar__Button--X"
+          size={32}
+          onClick={toggleMenu}
+        />
         <ul className="Navbar__List">
           {Links.map(({ text, route }) => (
             <li className="Navbar__Item" key={text}>
-              <Link className="Navbar__Link" to={route}>
+              <Link className="Navbar__Link" onClick={toggleMenu} to={route}>
                 {text}
               </Link>
             </li>
