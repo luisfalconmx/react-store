@@ -69,10 +69,17 @@
 
   &__Caption {
     color: var(--color-white);
-    font-size: 1.125rem;
-    font-weight: 400;
+    font-size: 1.5rem;
+    font-weight: 500;
     line-height: 32px;
-    margin: 0 0 12px;
+    margin: 0 0 30px;
+
+    @media (min-width: 768px) {
+      font-size: 1.125rem;
+      line-height: 32px;
+      font-weight: 400;
+      margin: 0 0 12px;
+    }
   }
 
   &__Title {
