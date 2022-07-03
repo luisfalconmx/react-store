@@ -1,7 +1,7 @@
 {
-  "name": "@luisfalconmx/spa-store",
+  "name": "@luisfalconmx/react-store",
   "version": "1.0.0",
-  "description": "Single Page Application with React, React Router, PostCSS, Webpack, Docker and Docker Compose.",
+  "description": "Single Page Application created with React, React Router, PostCSS and Webpack",
   "main": "src/index.js",
   "scripts": {
     "start": "yarn run dev",
@@ -10,16 +10,19 @@
     "analyze": "webpack --mode development --env analyze",
     "prepare": "husky install",
     "pre-commit": "lint-staged",
-    "api": "json-server --watch api/response.json --port 4000"
+    "api": "json-server --watch api/response.json --port 4000",
+    "lint": "eslint --fix .",
+    "stylelint": "stylelint --fix '**/*.{css,pcss,sss}'",
+    "pretty": "prettier --ignore-unknown --write ."
   },
   "lint-staged": {
-    "*.{js,jsx}": "eslint --cache --fix",
-    "*.{js,jsx,sss,md}": "prettier --write",
+    "*.{js,jsx}": "eslint --fix",
+    "*": "prettier --ignore-unknown --write",
     "*.{css,pcss,sss}": "stylelint --fix"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/luisfalconmx/spa-store.git"
+    "url": "git+https://github.com/luisfalconmx/react-store.git"
   },
   "keywords": [
     "react",
@@ -28,7 +31,6 @@
     "webpack",
     "postcss",
     "react-router",
-    "docker-compose",
     "single-page-app",
     "ecmascript6",
     "react-context",
@@ -37,9 +39,9 @@
   "author": "luisfalconmx",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/luisfalconmx/spa-store/issues"
+    "url": "https://github.com/luisfalconmx/react-store/issues"
   },
-  "homepage": "https://github.com/luisfalconmx/spa-store#readme",
+  "homepage": "https://github.com/luisfalconmx/react-store#readme",
   "dependencies": {
     "@splidejs/react-splide": "^0.6.20",
     "axios": "^0.25.0",
@@ -56,8 +58,8 @@
     "@babel/plugin-transform-runtime": "^7.16.10",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
-    "@commitlint/cli": "^16.1.0",
-    "@commitlint/config-conventional": "^16.0.0",
+    "@commitlint/cli": "^16.3.0",
+    "@commitlint/config-conventional": "^16.2.4",
     "@squoosh/lib": "^0.4.0",
     "autoprefixer": "^10.4.2",
     "babel-loader": "^8.2.3",
@@ -76,10 +78,10 @@
     "eslint-plugin-react": "^7.28.0",
     "html-loader": "^3.1.0",
     "html-webpack-plugin": "^5.5.0",
-    "husky": ">=6",
+    "husky": "^8.0.1",
     "image-minimizer-webpack-plugin": "^3.2.3",
     "json-server": "^0.17.0",
-    "lint-staged": ">=10",
+    "lint-staged": "^13.0.3",
     "mini-css-extract-plugin": "^2.5.3",
     "modern-normalize": "^1.1.0",
     "postcss": "^8.4.5",
