@@ -1,4 +1,7 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
+# Enable colors
+export FORCE_COLOR=1
+
 npx --no -- commitlint --edit "${1}"
