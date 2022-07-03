@@ -25,7 +25,7 @@ const Navbar = () => {
     },
     {
       text: 'Repositorio',
-      url: 'https://github.com/luisfalconmx/spa-store'
+      url: 'https://github.com/luisfalconmx/react-store'
     }
   ]
 
@@ -46,7 +46,7 @@ const Navbar = () => {
           srcSet={LogoWebp}
           alt="luisfalconmx logo oficial"
         />
-        <span className="Navbar__Title">SPA Store</span>
+        <span className="Navbar__Title">React Store</span>
       </Link>
       <Menu
         className="Navbar__Button Navbar__Button--Menu"

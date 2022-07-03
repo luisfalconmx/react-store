@@ -12,7 +12,7 @@ const Footer = () => {
   const SocialIcons = [
     {
       icon: <GitHub />,
-      url: 'https://github.com/luisfalconmx/spa-store'
+      url: 'https://github.com/luisfalconmx/react-store'
     },
     {
       icon: <Facebook />,
@@ -37,7 +37,7 @@ const Footer = () => {
           srcSet={LogoWebp}
           alt="luisfalconmx logo"
         />
-        <span className="Footer__Title">SPA Store</span>
+        <span className="Footer__Title">React Store</span>
       </Link>
       <div className="Footer__Description">
         Single Page Application with React, React Router, PostCSS, Webpack,
