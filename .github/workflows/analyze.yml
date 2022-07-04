@@ -1,0 +1,16 @@
+name: Analyze
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: "39 5 * * 0"
+
+jobs:
+  scan:
+    name: Analyze
+    uses: luisfalconmx/.github/.github/workflows/analyze.yml@main
+    with:
+      language: javascript
