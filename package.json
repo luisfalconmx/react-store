@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Single Page Application created with React, React Router, PostCSS and Webpack",
   "main": "src/index.js",
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "start": "yarn run dev",
     "dev": "webpack serve --mode development",
