@@ -1,5 +1,5 @@
 <!-- START .github/README_TEMPLATE/frontend.template.md -->
-<h1 align="center">react-store</h1>
+<h1 align="center">React Store</h1>
 
 <p align="center">
   <b>Single Page Application created with React, React Router, PostCSS and Webpack</b><br />
@@ -183,7 +183,7 @@ For better understand, it is advisable to follow the instructions detailed in [c
 
 ## License
 
-This project is free and open-source software licensed under the [MIT Licence](https://github.com/luisfalconmx/react-store/blob/main/LICENSE).
+This project is free and open-source software licensed under the [MIT License](https://github.com/luisfalconmx/react-store/blob/main/LICENSE).
 
 Some contents like images, videos, documents and other multimedia files use your own licence and in case required atributtion this is mentioned in any part of this project like in the code or in the documentation.
 
