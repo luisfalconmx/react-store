@@ -1,5 +1,5 @@
 <!-- START .github/README_TEMPLATE/frontend.template.md -->
-<h1 align="center">React Store</h1>
+<h1 align="center">react-store</h1>
 
 <p align="center">
   <b>Single Page Application created with React, React Router, PostCSS and Webpack</b><br />
