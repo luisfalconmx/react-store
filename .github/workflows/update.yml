@@ -10,3 +10,5 @@ jobs:
     uses: luisfalconmx/.github/.github/workflows/update.yml@main
     secrets:
       PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+    with:
+      darkMode: true
