@@ -20,7 +20,7 @@ const Counter = ({ count, max, decrement, increment, disabled = false }) => {
       </button>
 
       <b className="Counter__Text">
-        {count >= 2 ? `${count} Unidades` : `${count} Unidad`}
+        {count >= 2 ? `${count} Units` : `${count} Unit`}
       </b>
 
       <button

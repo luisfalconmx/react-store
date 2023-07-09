@@ -11,15 +11,15 @@ const Navbar = () => {
 
   const Links = [
     {
-      text: 'Productos',
+      text: 'Products',
       route: '/'
     },
     {
-      text: 'Carrito',
-      route: '/carrito-de-compras'
+      text: 'Cart',
+      route: '/cart'
     },
     {
-      text: 'Repositorio',
+      text: 'Repository',
       url: 'https://github.com/luisfalconmx/react-store'
     }
   ]
@@ -38,7 +38,7 @@ const Navbar = () => {
         <Image
           className="Navbar__Logo"
           src={Logo}
-          alt="luisfalconmx logo oficial"
+          alt="React store logo official"
           width="40"
           height="40"
         />

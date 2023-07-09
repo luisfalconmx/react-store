@@ -13,7 +13,7 @@ const ProductCard = ({
   product,
   price,
   stock,
-  description = 'La descripción del producto aún no está disponible en nuestra API o la información del producto se está actualizando.'
+  description = 'The product description is not yet available.'
 }) => {
   const [quantity, setQuantity] = useState(1)
   const { addToCart } = useContext(AppContext)
@@ -49,13 +49,13 @@ const ProductCard = ({
         <div className="ProductCard__Label ProductCard__Label--Success">
           <CheckCircle className="ProductCard__Icon" size={24} />
           <span className="ProductCard__LabelText">
-            Disponible en stock ({stock})
+            Available in stock ({stock})
           </span>
         </div>
       ) : (
         <div className="ProductCard__Label ProductCard__Label--Error">
           <AlertCircle className="ProductCard__Icon" size={24} />
-          <span className="ProductCard__LabelText">Agotado</span>
+          <span className="ProductCard__LabelText">Out of Stock</span>
         </div>
       )}
       <p className="ProductCard__Description">{description}</p>
@@ -72,7 +72,7 @@ const ProductCard = ({
           onClick={handleSubmit}
           type={stock <= 0 || stock === undefined ? 'disabled' : 'primary'}
         >
-          Agregar al carrito
+          Add to cart
         </Button>
       </div>
     </div>

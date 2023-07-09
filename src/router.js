@@ -20,7 +20,7 @@ const Router = () => {
           <Suspense fallback={null}>
             <Routes>
               <Route path="/" element={<Products />} />
-              <Route path="/carrito-de-compras" element={<Cart />} />
+              <Route path="/cart" element={<Cart />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>

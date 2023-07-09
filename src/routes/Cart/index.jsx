@@ -32,15 +32,15 @@ const Cart = () => {
   return (
     <>
       <Hero
-        title="Agrega productos a tu carrito y completa tu orden"
-        caption="Carrito de Compras"
+        title="Add products to your cart and complete your order"
+        caption="Shopping Cart"
         image={CartCover}
         imageWebp={CartCoverWebp}
       />
       <div className="Cart__Container">
         <Toolbar count={cart.length} />
         {cart.length <= 0 && (
-          <EmptyCard text="No tienes productos en tu carrito" />
+          <EmptyCard text="There are no products in your cart" />
         )}
         {cart.map((product) => (
           <CheckoutCard
@@ -61,14 +61,14 @@ const Cart = () => {
         <div className="Cart__Track">
           <Link to="/productos" className="Cart__Link">
             <Button className="Cart__Button" outline>
-              Ver más productos
+              See more products
             </Button>
           </Link>
           <Button
             className="Cart__Button"
             type={cart.length <= 0 ? 'disabled' : 'primary'}
           >
-            Completar orden
+            Complete order
           </Button>
         </div>
       </div>

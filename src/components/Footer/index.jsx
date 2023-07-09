@@ -45,7 +45,7 @@ const Footer = () => {
           Docker and Docker Compose.
         </div>
         <div className="Footer__Leyend">
-          Desarrollado con ❤️ por <a href={DEV_URL}>luisfalconmx</a>
+          Created with ❤️ by <a href={DEV_URL}>luisfalconmx</a>
         </div>
         <div className="Footer__Social">
           {SocialIcons.map(({ icon, url }) => (
