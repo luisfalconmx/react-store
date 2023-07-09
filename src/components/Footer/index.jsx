@@ -1,8 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Image from '@components/Image'
-import Logo from '@images/luisfalconmx-logo.png'
-import LogoWebp from '@images/luisfalconmx-logo.png?as=webp'
+import Logo from '@images/react-logo.svg'
 import { GitHub, Facebook, Instagram, Linkedin } from 'react-feather'
 import './index.pcss'
 
@@ -34,8 +33,9 @@ const Footer = () => {
         <Image
           className="Footer__Logo"
           src={Logo}
-          srcSet={LogoWebp}
           alt="luisfalconmx logo"
+          width={50}
+          height={50}
         />
         <span className="Footer__Title">React Store</span>
       </Link>
