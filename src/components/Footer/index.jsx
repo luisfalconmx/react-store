@@ -7,7 +7,7 @@ import { GitHub, Facebook, Instagram, Linkedin } from 'react-feather'
 import './index.pcss'
 
 const Footer = () => {
-  const BEHANCE_URL = 'https://www.behance.net/adair00'
+  const DEV_URL = 'https://www.luisfalconmx.dev'
 
   const SocialIcons = [
     {
@@ -16,7 +16,7 @@ const Footer = () => {
     },
     {
       icon: <Facebook />,
-      url: 'https://www.facebook.com/luisfalconmx'
+      url: 'https://www.facebook.com/luisfalconmx.dev'
     },
     {
       icon: <Instagram />,
@@ -44,7 +44,7 @@ const Footer = () => {
         Docker and Docker Compose.
       </div>
       <div className="Footer__Leyend">
-        Diseñado con ❤️ por <a href={BEHANCE_URL}>Jesus Adair</a>
+        Desarrollado con ❤️ por <a href={DEV_URL}>luisfalconmx</a>
       </div>
       <div className="Footer__Social">
         {SocialIcons.map(({ icon, url }) => (
