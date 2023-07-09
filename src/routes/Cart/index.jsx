@@ -37,38 +37,40 @@ const Cart = () => {
         image={CartCover}
         imageWebp={CartCoverWebp}
       />
-      <Toolbar count={cart.length} />
-      {cart.length <= 0 && (
-        <EmptyCard text="No tienes productos en tu carrito" />
-      )}
-      {cart.map((product) => (
-        <CheckoutCard
-          key={product.id}
-          product={product}
-          count={product.quantity}
-          max={product.stock}
-          increment={() => product.quantity + 1}
-        />
-      ))}
+      <div className="Cart__Container">
+        <Toolbar count={cart.length} />
+        {cart.length <= 0 && (
+          <EmptyCard text="No tienes productos en tu carrito" />
+        )}
+        {cart.map((product) => (
+          <CheckoutCard
+            key={product.id}
+            product={product}
+            count={product.quantity}
+            max={product.stock}
+            increment={() => product.quantity + 1}
+          />
+        ))}
 
-      {cart.length > 0 && (
-        <div className="Cart__Total">
-          Total: <b className="Cart__TotalNumber">${total}</b>
-        </div>
-      )}
+        {cart.length > 0 && (
+          <div className="Cart__Total">
+            Total: <b className="Cart__TotalNumber">${total}</b>
+          </div>
+        )}
 
-      <div className="Cart__Track">
-        <Link to="/productos">
-          <Button className="Cart__Button" outline>
-            Ver más productos
+        <div className="Cart__Track">
+          <Link to="/productos" className="Cart__Link">
+            <Button className="Cart__Button" outline>
+              Ver más productos
+            </Button>
+          </Link>
+          <Button
+            className="Cart__Button"
+            type={cart.length <= 0 ? 'disabled' : 'primary'}
+          >
+            Completar orden
           </Button>
-        </Link>
-        <Button
-          className="Cart__Button"
-          type={cart.length <= 0 ? 'disabled' : 'primary'}
-        >
-          Completar orden
-        </Button>
+        </div>
       </div>
     </>
   )

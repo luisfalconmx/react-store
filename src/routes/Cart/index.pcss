@@ -20,6 +20,12 @@
     font-weight: 700;
   }
 
+  &__Container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
   &__Track {
     display: flex;
     justify-content: space-evenly;
@@ -32,11 +38,22 @@
     }
   }
 
+  &__Link {
+    display: block;
+    width: 100%;
+
+    @media (min-width: 768px) {
+      width: fit-content;
+    }
+  }
+
   &__Button {
     margin-top: 10px;
+    width: 100%;
 
     @media (min-width: 768px) {
       margin-top: 0;
+      width: fit-content;
     }
   }
 }

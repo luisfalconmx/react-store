@@ -29,35 +29,37 @@ const Footer = () => {
 
   return (
     <footer className="Footer">
-      <Link className="Footer__Identity" to="/">
-        <Image
-          className="Footer__Logo"
-          src={Logo}
-          alt="luisfalconmx logo"
-          width="40"
-          height="40"
-        />
-        <span className="Footer__Title">React Store</span>
-      </Link>
-      <div className="Footer__Description">
-        Single Page Application with React, React Router, PostCSS, Webpack,
-        Docker and Docker Compose.
-      </div>
-      <div className="Footer__Leyend">
-        Desarrollado con ❤️ por <a href={DEV_URL}>luisfalconmx</a>
-      </div>
-      <div className="Footer__Social">
-        {SocialIcons.map(({ icon, url }) => (
-          <a
-            key={url}
-            href={url}
-            className="Footer__SocialIcon"
-            target="_blank"
-            rel="noreferrer"
-          >
-            {icon}
-          </a>
-        ))}
+      <div className="Footer__Container">
+        <Link className="Footer__Identity" to="/">
+          <Image
+            className="Footer__Logo"
+            src={Logo}
+            alt="luisfalconmx logo"
+            width="40"
+            height="40"
+          />
+          <span className="Footer__Title">React Store</span>
+        </Link>
+        <div className="Footer__Description">
+          Single Page Application with React, React Router, PostCSS, Webpack,
+          Docker and Docker Compose.
+        </div>
+        <div className="Footer__Leyend">
+          Desarrollado con ❤️ por <a href={DEV_URL}>luisfalconmx</a>
+        </div>
+        <div className="Footer__Social">
+          {SocialIcons.map(({ icon, url }) => (
+            <a
+              key={url}
+              href={url}
+              className="Footer__SocialIcon"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {icon}
+            </a>
+          ))}
+        </div>
       </div>
     </footer>
   )

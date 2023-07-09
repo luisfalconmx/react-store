@@ -11,12 +11,8 @@ const Navbar = () => {
 
   const Links = [
     {
-      text: 'Inicio',
-      route: '/'
-    },
-    {
       text: 'Productos',
-      route: '/productos'
+      route: '/'
     },
     {
       text: 'Carrito',
