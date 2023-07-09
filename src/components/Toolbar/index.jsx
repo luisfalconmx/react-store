@@ -11,15 +11,15 @@ const Toolbar = ({ count = 0 }) => {
   let countText
 
   if (count === 0) {
-    countText = 'Sin productos'
+    countText = 'No products'
   }
 
   if (count === 1) {
-    countText = '1 producto'
+    countText = '1 product'
   }
 
   if (count > 1) {
-    countText = `${count} productos`
+    countText = `${count} products`
   }
 
   const ToolbarIconClasses = classNames('Toolbar__Icon', {

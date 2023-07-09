@@ -1,13 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Image from '@components/Image'
-import Logo from '@images/luisfalconmx-logo.png'
-import LogoWebp from '@images/luisfalconmx-logo.png?as=webp'
+import Logo from '@images/react-logo.svg'
 import { GitHub, Facebook, Instagram, Linkedin } from 'react-feather'
 import './index.pcss'
 
 const Footer = () => {
-  const BEHANCE_URL = 'https://www.behance.net/adair00'
+  const DEV_URL = 'https://www.luisfalconmx.dev'
 
   const SocialIcons = [
     {
@@ -16,7 +15,7 @@ const Footer = () => {
     },
     {
       icon: <Facebook />,
-      url: 'https://www.facebook.com/luisfalconmx'
+      url: 'https://www.facebook.com/luisfalconmx.dev'
     },
     {
       icon: <Instagram />,
@@ -30,34 +29,37 @@ const Footer = () => {
 
   return (
     <footer className="Footer">
-      <Link className="Footer__Identity" to="/">
-        <Image
-          className="Footer__Logo"
-          src={Logo}
-          srcSet={LogoWebp}
-          alt="luisfalconmx logo"
-        />
-        <span className="Footer__Title">React Store</span>
-      </Link>
-      <div className="Footer__Description">
-        Single Page Application with React, React Router, PostCSS, Webpack,
-        Docker and Docker Compose.
-      </div>
-      <div className="Footer__Leyend">
-        Diseñado con ❤️ por <a href={BEHANCE_URL}>Jesus Adair</a>
-      </div>
-      <div className="Footer__Social">
-        {SocialIcons.map(({ icon, url }) => (
-          <a
-            key={url}
-            href={url}
-            className="Footer__SocialIcon"
-            target="_blank"
-            rel="noreferrer"
-          >
-            {icon}
-          </a>
-        ))}
+      <div className="Footer__Container">
+        <Link className="Footer__Identity" to="/">
+          <Image
+            className="Footer__Logo"
+            src={Logo}
+            alt="luisfalconmx logo"
+            width="40"
+            height="40"
+          />
+          <span className="Footer__Title">React Store</span>
+        </Link>
+        <div className="Footer__Description">
+          Single Page Application with React, React Router, PostCSS, Webpack,
+          Docker and Docker Compose.
+        </div>
+        <div className="Footer__Leyend">
+          Created with ❤️ by <a href={DEV_URL}>luisfalconmx</a>
+        </div>
+        <div className="Footer__Social">
+          {SocialIcons.map(({ icon, url }) => (
+            <a
+              key={url}
+              href={url}
+              className="Footer__SocialIcon"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {icon}
+            </a>
+          ))}
+        </div>
       </div>
     </footer>
   )

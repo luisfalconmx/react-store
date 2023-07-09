@@ -7,8 +7,8 @@ const Products = () => {
   return (
     <>
       <Hero
-        title="Todo nuestro catalogo de productos a los mejores precios"
-        caption="Productos"
+        title="The best gadgets can you find with the lowest prices"
+        caption="Products"
         image={ProductsCover}
       />
       <ProductsList />

@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom'
 import classNames from 'classnames'
 import { Menu, X } from 'react-feather'
 import Image from '@components/Image'
-import Logo from '@images/luisfalconmx-logo.png'
-import LogoWebp from '@images/luisfalconmx-logo.png?as=webp'
+import Logo from '@images/react-logo.svg'
 import './index.pcss'
 
 const Navbar = () => {
@@ -12,19 +11,15 @@ const Navbar = () => {
 
   const Links = [
     {
-      text: 'Inicio',
+      text: 'Products',
       route: '/'
     },
     {
-      text: 'Productos',
-      route: '/productos'
+      text: 'Cart',
+      route: '/cart'
     },
     {
-      text: 'Carrito',
-      route: '/carrito-de-compras'
-    },
-    {
-      text: 'Repositorio',
+      text: 'Repository',
       url: 'https://github.com/luisfalconmx/react-store'
     }
   ]
@@ -43,8 +38,9 @@ const Navbar = () => {
         <Image
           className="Navbar__Logo"
           src={Logo}
-          srcSet={LogoWebp}
-          alt="luisfalconmx logo oficial"
+          alt="React store logo official"
+          width="40"
+          height="40"
         />
         <span className="Navbar__Title">React Store</span>
       </Link>

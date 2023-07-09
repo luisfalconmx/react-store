@@ -1,17 +1,13 @@
 .CheckoutCard {
   max-width: 1024px;
   margin: 0 15px 30px;
-  background-color: var(--color-white);
+  background-color: var(--color-night);
   padding: 30px;
   box-shadow: var(--shadow);
   border-radius: 6px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: 'icon' 'id' 'title' 'price' 'description' 'track';
-
-  @media (prefers-color-scheme: dark) {
-    background-color: var(--color-night);
-  }
 
   @media (min-width: 768px) {
     grid-template-columns: 1fr 30%;

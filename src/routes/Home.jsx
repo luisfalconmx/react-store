@@ -3,7 +3,7 @@ import Hero from '@components/Hero'
 import Benefits from '@containers/Benefits'
 import Features from '@containers/Features'
 import RelatedInfo from '@containers/RelatedInfo'
-import Team from '@containers/Team'
+// import Team from '@containers/Team'
 import CallToAction from '@containers/CallToAction'
 import HomeCover from '@images/inicio-video-cover.jpg'
 import HeroVideo from '@videos/inicio-video.mp4'
@@ -21,7 +21,7 @@ const Home = () => {
       <Benefits />
       <Features />
       <RelatedInfo />
-      <Team />
+      {/* <Team /> */}
       <CallToAction />
     </>
   )

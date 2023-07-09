@@ -26,7 +26,7 @@ const Hero = ({ title, caption, buttonText, image, imageWebp, video }) => {
         <small className="Hero__Caption">{caption}</small>
         <h1 className="Hero__Title">{title}</h1>
         {buttonText && (
-          <Link to="/productos">
+          <Link to="/">
             <Button>{buttonText}</Button>
           </Link>
         )}

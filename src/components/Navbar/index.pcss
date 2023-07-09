@@ -12,6 +12,10 @@
 
   @media (min-width: 992px) {
     padding: 0 48px;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
   }
 
   &__Identity {
@@ -34,6 +38,7 @@
 
   &__Button {
     cursor: pointer;
+    color: var(--color-white);
 
     &--Menu {
       color: var(--color-white);
@@ -41,13 +46,9 @@
     }
 
     &--X {
-      color: var(--color-black);
+      color: var(--color-white);
       display: block;
       margin-left: auto;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      color: var(--color-white);
     }
 
     @media (min-width: 768px) {
@@ -62,16 +63,12 @@
     position: fixed;
     top: 0;
     left: 100vw;
-    background-color: var(--color-white);
+    background-color: var(--color-night);
     transition: all ease 0.3s;
     padding: 34px 24px;
 
     &--Active {
       left: 0;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      background-color: var(--color-night);
     }
 
     @media (min-width: 768px) {
@@ -116,11 +113,7 @@
     font-size: 1.5rem;
     line-height: 24px;
     cursor: pointer;
-    color: var(--color-black);
-
-    @media (prefers-color-scheme: dark) {
-      color: var(--color-white);
-    }
+    color: var(--color-white);
 
     @media (min-width: 768px) {
       font-size: 1rem;

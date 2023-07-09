@@ -12,8 +12,9 @@ const CheckoutCard = ({ product, count, max }) => {
 
   const totalPrice = () => {
     const cleanPrice = product.price.replace('$', '')
+    console.log(cleanPrice)
     const price = parseFloat(cleanPrice)
-    return price * quantity
+    return parseFloat(price * quantity).toFixed(2)
   }
 
   const incrementQuantity = () => {
@@ -59,7 +60,7 @@ const CheckoutCard = ({ product, count, max }) => {
           type={quantity === count ? 'disabled' : 'primary'}
           onClick={handleUpdate}
         >
-          Actualizar
+          Update
         </Button>
       </div>
     </div>

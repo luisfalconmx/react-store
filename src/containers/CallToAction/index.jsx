@@ -11,7 +11,7 @@ const CallToAction = () => {
         Contamos con una amplia lista de productos para que puedas elegir
         exactamente lo que necesitas
       </p>
-      <Link to="/productos">
+      <Link to="/">
         <Button className="CallToAction__Button">Ver productos</Button>
       </Link>
     </section>

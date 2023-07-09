@@ -5,8 +5,8 @@ import AppContext from '@context/AppContext'
 import useCart from '@hooks/useCart'
 
 // Import routes
-const Home = lazy(() => import('@routes/Home'))
-const Products = lazy(() => import('@routes/Products'))
+// const Home = lazy(() => import('@routes/Home'))
+import Products from '@routes/Products'
 const Cart = lazy(() => import('@routes/Cart'))
 const NotFound = lazy(() => import('@routes/NotFound'))
 
@@ -19,9 +19,8 @@ const Router = () => {
         <Layout>
           <Suspense fallback={null}>
             <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/productos" element={<Products />} />
-              <Route path="/carrito-de-compras" element={<Cart />} />
+              <Route path="/" element={<Products />} />
+              <Route path="/cart" element={<Cart />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
