@@ -43,8 +43,8 @@ const Navbar = () => {
           className="Navbar__Logo"
           src={Logo}
           alt="luisfalconmx logo oficial"
-          width={40}
-          height={40}
+          width="40"
+          height="40"
         />
         <span className="Navbar__Title">React Store</span>
       </Link>

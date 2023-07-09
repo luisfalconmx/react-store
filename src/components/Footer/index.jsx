@@ -34,8 +34,8 @@ const Footer = () => {
           className="Footer__Logo"
           src={Logo}
           alt="luisfalconmx logo"
-          width={50}
-          height={50}
+          width="40"
+          height="40"
         />
         <span className="Footer__Title">React Store</span>
       </Link>
