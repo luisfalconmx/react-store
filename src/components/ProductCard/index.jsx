@@ -33,7 +33,7 @@ const ProductCard = ({
 
   const handleSubmit = async () => {
     await addToCart({ id, product, price, stock, quantity })
-    navigate('/carrito-de-compras')
+    navigate('/cart')
   }
 
   const ProductCardClasses = classNames('ProductCard', {

@@ -59,7 +59,7 @@ const Cart = () => {
         )}
 
         <div className="Cart__Track">
-          <Link to="/productos" className="Cart__Link">
+          <Link to="/" className="Cart__Link">
             <Button className="Cart__Button" outline>
               See more products
             </Button>
