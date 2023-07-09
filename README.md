@@ -9,7 +9,7 @@
 <br />
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/luisfalconmx/react-store/main/.github/screenshot.png" alt="React Store" width="100%" />
+  <img src="https://raw.githubusercontent.com/luisfalconmx/react-store/main/.github/screenshot.jpeg" alt="React Store" width="100%" />
 </p>
 
 <br />
